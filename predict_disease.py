@@ -2,6 +2,7 @@ import tensorflow as tf
 import numpy as np
 from tensorflow.keras.preprocessing import image
 import os
+from class_names import class_names
 
 # Treatment recommendations
 treatment_dict = {
@@ -26,7 +27,7 @@ treatment_dict = {
 model = tf.keras.models.load_model("plant_disease_model.h5")
 
 # Get class names from training folder
-class_names = sorted(os.listdir("PlantVillage/train"))
+# class_names = sorted(os.listdir("PlantVillage/train"))
 
 def predict_disease(img_path):
     img = image.load_img(img_path, target_size=(224, 224))

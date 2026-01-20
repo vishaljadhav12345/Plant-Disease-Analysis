@@ -3,6 +3,7 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import os
+from class_names import class_names
 
 # Page title
 st.set_page_config(page_title="Plant Disease Analysis", page_icon="🌿")
@@ -18,7 +19,7 @@ def load_model():
 model = load_model()
 
 # Class names
-class_names = sorted(os.listdir("PlantVillage/train"))
+# class_names = sorted(os.listdir("PlantVillage/train"))
 
 # Treatment dictionary
 treatment_dict = {
